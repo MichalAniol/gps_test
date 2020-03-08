@@ -21,6 +21,7 @@ body {
     color: var(--color_1);
     font-family: var(--font);
     font-size: 20px;
+    display: grid;
 }
 
 .output {

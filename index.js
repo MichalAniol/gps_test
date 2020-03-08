@@ -17,10 +17,22 @@ const showPosition = (position) => {
     gps.innerHTML = location.latitude + '<br>' + location.longitude
 }
 
-var timeCounter = 0;
 
-setInterval(() => {
-    getLocation();
-    timeCounter++;
-    counter.innerHTML = timeCounter;
-}, 2000);
+
+
+getLocation();
+
+var timeCounter = 0;
+var checkingGeo = null;
+const waitForPromision = setInterval(() => {
+    if (gps.innerHTML != '') {
+        clearInterval(waitForPromision)
+
+        checkingGeo = setInterval(() => {
+            getLocation();
+            timeCounter++;
+            counter.innerHTML = timeCounter;
+        }, 300);
+    }
+}, 300
+);
