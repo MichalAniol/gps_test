@@ -132,8 +132,8 @@ const waitForPromision = setInterval(() => {
         checkingGeo = setInterval(() => {
             getLocation();
             timeCounter++;
-            counter.innerHTML = '_' + timeCounter + '_';
-        }, 300);
+            counter.innerHTML = '___' + timeCounter + '___';
+        }, 1000);
     }
 }, 300
 );
