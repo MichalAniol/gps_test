@@ -23,4 +23,4 @@ setInterval(() => {
     getLocation();
     timeCounter++;
     counter.innerHTML = timeCounter;
-}, 2000);
+}, 300);
