@@ -111,6 +111,7 @@ const showPosition = (position) => {
         gps.innerHTML = location.latitude + '<br>' + location.longitude;
 
         route.push([location.latitude, location.longitude])
+        draw();
     }
 }
 
