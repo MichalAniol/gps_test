@@ -166,7 +166,7 @@ var test = {
     y: 0
 }
 
-setInterval(() => {
-    test.x++;
-    test.y++;
-}, 500);
+// setInterval(() => {
+//     test.x++;
+//     test.y++;
+// }, 500);
