@@ -6,24 +6,44 @@
     src: local('open sans extralight'), local('open-sans-extralight'), url('font/Rubik-Regular.eot?#iefix') format('embedded-opentype'), url('font/Rubik-Regular.woff2') format('woff2'), url('font/Rubik-Regular.woff') format('woff'), url('font/Rubik-Regular.ttf') format('truetype'), url('font/Rubik-Regular.svg#Barlow') format('svg');
 }
 
-:root {
-    --color_1: #006600;
-    --color_2: #001600;
-    --color_3: #000800;
-    --color_back: black;
-    --font: 'Rubik', sans-serif
-}
-
 body {
-    margin: 10px;
+    /* margin: 10px; */
     padding: 0;
-    background-color: var(--color_back);
-    color: var(--color_1);
-    font-family: var(--font);
-    font-size: 20px;
-    display: grid;
+    margin: 0;
+    background-color: #111111;
+    color: #ffffff;
+    font-family: 'Rubik';
+    font-size: 30px;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    box-shadow: 0px 0px 0px 1px blue;
 }
 
 .output {
-    margin: 20px auto;
+    position: relative;
+    margin: 20px 0 0;
+    white-space: nowrap;
+    width: 100%;
+    text-align: center;
+}
+
+.output:first-child {
+    position: relative;
+    margin-top: 0;
+}
+
+.center {
+    padding: 20px;
+}
+
+
+#way {
+    position: relative;
+    /* width: 100%; */
+    height: calc(100% - 168px);
+    /* box-shadow: 0px 0px 0px 1px red; */
+    background-color: #000000;
+    /* justify-content: stretch; */
+    
 }
