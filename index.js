@@ -55,6 +55,7 @@ const getPosition = (pos) => {
 const draw = () => {
 
     if (route.length > 0) {
+        c.clearRect(0, 0, canvas.width, canvas.height);
         // trasa
         c.lineWidth = 5;
         c.strokeStyle = '#ffffff';
@@ -131,7 +132,7 @@ const waitForPromision = setInterval(() => {
         checkingGeo = setInterval(() => {
             getLocation();
             timeCounter++;
-            counter.innerHTML = '+_' + timeCounter + '_+';
+            counter.innerHTML = '_' + timeCounter + '_';
         }, 300);
     }
 }, 300
