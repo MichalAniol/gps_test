@@ -103,7 +103,9 @@ const lastPosition = {
 }
 
 const showPosition = (position) => {
-    if (lastPosition.x != location.latitude || lastPosition.y != location.longitude) {
+    let x = location.latitude + test.x,
+        y = location.longitude + test.y;
+    if (lastPosition.x != x || lastPosition.y != y) {
         let location = {
             longitude: position.coords.longitude,
             latitude: position.coords.latitude
@@ -155,3 +157,13 @@ const waitForPromision = setInterval(() => {
 // }
 
 // pathTest()
+
+var test = {
+    x: 0,
+    y: 0
+}
+
+setInterval(() => {
+    test.x++;
+    test.y++;
+}, 500);
