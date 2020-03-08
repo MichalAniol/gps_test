@@ -103,16 +103,19 @@ const lastPosition = {
 }
 
 const showPosition = (position) => {
+    let location = {
+        longitude: position.coords.longitude,
+        latitude: position.coords.latitude
+    }
+
     let x = location.latitude + test.x,
         y = location.longitude + test.y;
-    if (lastPosition.x != x || lastPosition.y != y) {
-        let location = {
-            longitude: position.coords.longitude,
-            latitude: position.coords.latitude
-        }
-        gps.innerHTML = location.latitude + '<br>' + location.longitude;
 
-        route.push([location.latitude, location.longitude])
+    if (lastPosition.x != x || lastPosition.y != y) {
+        gps.innerHTML = x + '<br>' + y;
+
+        route.push([x, y])
+        findProportions();
         draw();
     }
 }
